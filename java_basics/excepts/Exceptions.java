@@ -13,6 +13,7 @@ public class Exceptions{
                 // TODO: handle exception
                 // System.out.println(String.format("Error at list index %s", i));
                 System.out.println(e);
+                //comments
             }
         }
     }
