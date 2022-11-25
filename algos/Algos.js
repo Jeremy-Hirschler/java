@@ -25,3 +25,32 @@ function noCp(a,b){
 }
 
 //console.log(noCp([1,2,3],[2,1,2]))
+
+class Node{
+    constructor(val){
+        this.data = val;
+        this.next = null;
+    }
+}
+
+class SLL{
+    constructor(){
+        this.head = null;
+    }
+
+    addFront(val){
+        let newNode = new Node(val);
+
+        if (!this.head){
+            this.head = newNode;
+            return this;
+        }
+
+        newNode.next = this.head;
+        this.head = newNode;
+        return this;
+    }
+}
+
+let list = new SLL();
+console.log(list.addFront(4).addFront(7))
