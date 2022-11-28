@@ -52,5 +52,3 @@ class SLL{
     }
 }
 
-// let list = new SLL();
-// console.log(list.addFront(4).addFront(7))
