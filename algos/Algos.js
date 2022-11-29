@@ -52,3 +52,4 @@ class SLL{
     }
 }
 
+//algo practice
