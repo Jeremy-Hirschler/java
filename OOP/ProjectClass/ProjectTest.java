@@ -23,5 +23,12 @@ class ProjectTest{
         String fullDesc = nameAndDesc.getDescription();
         double fullCost = nameAndDesc.getCost();
         System.out.println(String.format("%s ($%s): %s", fullName, fullCost, fullDesc));
+
+        //Portfolio
+        Portfolio productPortfolio = new Portfolio();
+        productPortfolio.AddToPortfolio(elevatorPitch);
+        productPortfolio.AddToPortfolio(nameAndDesc);
+        System.out.println(productPortfolio.getPortfolio());
+        productPortfolio.showPortfolio();
     }
 }
