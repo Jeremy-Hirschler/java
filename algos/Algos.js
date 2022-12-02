@@ -52,3 +52,24 @@ class SLL{
     }
 }
 
+//coding
+function twoSum(num, target){
+    let map = new Map();
+    for (let i=0; i<num.length; i++){
+        if (!map.get(num[i])){
+            map.set(num[i], i)
+        }
+    }
+
+    for (let i=0; i<num.length; i++){
+        if (map.get(target - num[i])){
+            return [i, map.get(target - num[i])]
+        }
+    }
+    console.log(map)
+    return 1
+}
+
+//console.log(twoSum([2,7,11,15],9))
+
+
