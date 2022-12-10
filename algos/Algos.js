@@ -72,4 +72,86 @@ function twoSum(num, target){
 
 //console.log(twoSum([2,7,11,15],9))
 
+function boxes(arr, num){
+    
+    let count = 0;
+    let boxes = 0;
+    if (arr.length == 0){
+        return 0
+    }
+    
 
+    arr.sort((a,b)=> b[1]-a[1])
+    for (let i=0; i<arr.length; i++){
+        if (arr[i][0] < num - boxes){
+            count += arr[i][0] * arr[i][1]
+            boxes += arr[i][0]
+        }else{
+            let leftOvers = num - boxes
+            count += leftOvers * arr[i][1]
+            boxes += leftOvers
+        }
+        
+    }
+    console.log('counts',count)
+    return count
+}
+console.log('r',boxes([[1,3],[2,2],[3,1]], 4))//8
+console.log('r',boxes([[5,10],[2,5],[4,7],[3,9]], 10))//91
+
+
+
+
+function matrix(arr){
+    
+    let max = -Infinity
+    for (let i=0; i<arr.length-2; i++){
+        
+        for (let j=0; j<arr[i].length-2; j++){
+            let top = arr[i][j] + arr[i][j+1] + arr[i][j+2]
+            let middle = arr[i+1][j+1]
+            let bottom = arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2]
+            let sum = top + middle + bottom
+            if (sum > max){
+                max = sum;
+            }
+        }
+        
+    }
+    return max
+}
+
+// console.log(matrix([[6,2,1,3],[4,2,1,5],[9,2,8,7],[4,1,2,9]]))
+
+function water(arr,can){
+    let steps = 0;
+    let maxCan = can;
+    let i = 0;
+    // for (let i=0; i<arr.length; i++){
+    //     if (arr[i] <= can){
+    //         can -= arr[i]
+    //         steps ++
+    //     }else{
+    //         steps += i * 2
+    //         can = maxCan
+    //         i--
+    //     }
+    // }
+    while (i < arr.length){
+        if (arr[i] <= can){
+            can -= arr[i]
+            steps++
+            i++
+            console.log('g')
+        }else{
+            steps += i*2
+            can = maxCan
+            console.log(arr[i])
+        }
+    }
+    return steps
+    
+}
+
+// console.log(water([2,2,3,3],5))//14
+// console.log(water([1,1,1,4,2,3], 4))//30
