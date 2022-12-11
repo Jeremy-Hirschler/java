@@ -80,7 +80,6 @@ function boxes(arr, num){
         return 0
     }
     
-
     arr.sort((a,b)=> b[1]-a[1])
     for (let i=0; i<arr.length; i++){
         if (arr[i][0] < num - boxes){
@@ -93,7 +92,6 @@ function boxes(arr, num){
         }
         
     }
-    console.log('counts',count)
     return count
 }
 console.log('r',boxes([[1,3],[2,2],[3,1]], 4))//8
@@ -155,3 +153,5 @@ function water(arr,can){
 
 // console.log(water([2,2,3,3],5))//14
 // console.log(water([1,1,1,4,2,3], 4))//30
+
+//comment
