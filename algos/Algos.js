@@ -152,6 +152,6 @@ function water(arr,can){
 }
 
 // console.log(water([2,2,3,3],5))//14
-//comment
+
 
 
