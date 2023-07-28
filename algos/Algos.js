@@ -25,7 +25,7 @@ function noCp(a,b){
 }
 
 //console.log(noCp([1,2,3],[2,1,2]))
-//comment
+//comm
 class Node{
     constructor(val){
         this.data = val;
